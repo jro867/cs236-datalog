@@ -38,9 +38,14 @@ OBJECTFILES= \
 	${OBJECTDIR}/DatalogProgram.o \
 	${OBJECTDIR}/Input.o \
 	${OBJECTDIR}/Lex.o \
+	${OBJECTDIR}/Node.o \
+	${OBJECTDIR}/RuleList.o \
+	${OBJECTDIR}/Schemes.o \
+	${OBJECTDIR}/SchemesList.o \
 	${OBJECTDIR}/State.o \
 	${OBJECTDIR}/Token.o \
 	${OBJECTDIR}/TokenType.o \
+	${OBJECTDIR}/TokensReader.o \
 	${OBJECTDIR}/Utils.o
 
 
@@ -83,6 +88,26 @@ ${OBJECTDIR}/Lex.o: Lex.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/Lex.o Lex.cpp
 
+${OBJECTDIR}/Node.o: Node.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/Node.o Node.cpp
+
+${OBJECTDIR}/RuleList.o: RuleList.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/RuleList.o RuleList.cpp
+
+${OBJECTDIR}/Schemes.o: Schemes.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/Schemes.o Schemes.cpp
+
+${OBJECTDIR}/SchemesList.o: SchemesList.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/SchemesList.o SchemesList.cpp
+
 ${OBJECTDIR}/State.o: State.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
@@ -97,6 +122,11 @@ ${OBJECTDIR}/TokenType.o: TokenType.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/TokenType.o TokenType.cpp
+
+${OBJECTDIR}/TokensReader.o: TokensReader.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/TokensReader.o TokensReader.cpp
 
 ${OBJECTDIR}/Utils.o: Utils.cpp 
 	${MKDIR} -p ${OBJECTDIR}

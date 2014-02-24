@@ -5,6 +5,7 @@
 #include "Input.h"
 #include "State.h"
 #include "DatalogProgram.h"
+#include "TokensReader.h"
 #include <vector>
 #include <string>
 #include <istream>
@@ -154,7 +155,10 @@ class Lex {
          * PostCondition: currentToken = currentToken' + 1
          */
         void advance(); 
-
+        TokensReader getTokens() {
+            TokensReader tokenReader(tokens);
+            return tokenReader;
+        }
 
     private:
         //Domain Implementation

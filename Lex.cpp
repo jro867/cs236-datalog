@@ -85,7 +85,7 @@ void Lex::generateTokens(Input* input) {
         state = nextState();
     }
     emit(EOF);
-    datalogParser = DatalogProgram(tokens);
+    
 }
 
 Token* Lex::getCurrentToken() {
@@ -275,10 +275,13 @@ void Lex::storeToken(Token* token) {
 
 int main(int argc, char* argv[]) {
     Lex lex(argv[1]);
+    TokensReader reader = lex.getTokens();
+    DatalogProgram * program = new DatalogProgram(reader);
     try {
-        cout << lex.toString();
-    } catch(char * e) {
-        cout << e;
+        cout << "Success!" << endl;
+        cout << program->toString() << endl;
+    } catch(ParsingException * e) {
+        cout << e->what() << endl;
     }
     return 0;
 }
