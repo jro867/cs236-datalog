@@ -7,6 +7,8 @@
 #include "Node.h"
 #include "SchemesList.h"
 #include "FactList.h"
+#include "RuleList.h"
+#include "QueryList.h"
 #include <vector>
 #include <iostream>
 using namespace std;
@@ -19,9 +21,10 @@ public:
     virtual ~DatalogProgram();
 private:
     Node* readSchemes(TokensReader&);
-    Node* readFacts(TokensReader&, Node* start);
-    Node* readRules(TokensReader&, Node* start);
-    Node* readQueries(TokensReader&, Node* start);
+    Node* readFacts(TokensReader&, Node* schemeList);
+    Node* readRules(TokensReader&, Node* factList);
+    Node* readQueries(TokensReader&, Node* ruleList);
+    Node* addDomain(Node*);
     
     Node* generateListSize(int size, Node*& last);
 };

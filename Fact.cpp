@@ -5,6 +5,7 @@ Fact::Fact() {
 
 Fact::Fact(TokensReader& tokenReader) {
     this->printNL = true;
+    this->level = 1;
     if(tokenReader.getCurrent()->getTokenType() == ID) {
         Node* id = new Node(tokenReader.getCurrent());
         this->setLeftChild(id);
@@ -14,6 +15,7 @@ Fact::Fact(TokensReader& tokenReader) {
             if(tokenReader.getNext()->getTokenType() == STRING) {
                 Node* string = new Node(tokenReader.getCurrent());
                 leftParen->setRightSibling(string);
+                Domain::addToDomain(tokenReader.getCurrent()->getTokensValue());
                 string->setRightSibling(new StringList(tokenReader));
                 if(tokenReader.getCurrent()->getTokenType() == RIGHT_PAREN) {
                     Node* rightParen = new Node(tokenReader.getCurrent());

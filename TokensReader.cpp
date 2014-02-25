@@ -13,6 +13,14 @@ Token* TokensReader::getNext(){
     }
     return next;
 }
+Token* TokensReader::peek() {
+    int index = curIndex+1;
+    Token* next = tokens->at(index); 
+    while(next->getTokenType() == COMMENT) {
+        next = tokens->at(++index); 
+    }
+    return next;
+}
 bool TokensReader::hasNext(){
     return curIndex < tokens->size()-1;
 }

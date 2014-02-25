@@ -25,7 +25,7 @@ enum TokenType{
     COMMENT, 
     UNDEFINED,
     NUL,
-    EOF
+    END
 };
     
 /**

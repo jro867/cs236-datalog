@@ -1,8 +1,5 @@
 #include "IdList.h"
 
-IdList::IdList() {
-}
-
 IdList::IdList(TokensReader& tokenReader) {
     if(tokenReader.getNext()->getTokenType() == COMMA){
         Node * comma = new Node(tokenReader.getCurrent());
@@ -11,6 +8,7 @@ IdList::IdList(TokensReader& tokenReader) {
             comma->setRightSibling(new Node(tokenReader.getCurrent()));
             comma->getRightSibling()->setRightSibling(new IdList(tokenReader));
         } else {
+            cout << "Error 1" << endl;
             throw ParsingException(tokenReader.getCurrent());
         }
     } else {

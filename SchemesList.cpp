@@ -7,10 +7,11 @@ SchemesList::SchemesList() {
 }
 
 SchemesList::SchemesList(TokensReader& tokenReader){
-    if(tokenReader.getNext()->getTokenType() == ID){
+    if(tokenReader.getCurrent()->getTokenType() == ID){
         Scheme* schemeNode = new Scheme(tokenReader);  
         this->schemes.push_back(schemeNode);
         this->setLeftChild(schemeNode);
+        tokenReader.getNext();
         schemeNode->setRightSibling(new SchemesList(tokenReader));
     } else {
         // empty

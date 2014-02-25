@@ -8,6 +8,7 @@
 #ifndef STRINGLIST_H
 #define	STRINGLIST_H
 
+#include "Domain.h"
 #include "Node.h"
 
 class StringList : public Node {

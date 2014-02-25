@@ -9,7 +9,6 @@ using namespace std;
 
 class IdList: public Node{
 public:
-    IdList();
     IdList(TokensReader&);
     IdList(const IdList& orig);
     virtual ~IdList();

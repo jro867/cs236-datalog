@@ -23,7 +23,7 @@ string TokenTypeToString(TokenType tokenType){
         case COMMENT:            result = "COMMENT"; break;
         case UNDEFINED:          result = "UNDEFINED"; break;
         case NUL:                result = "NUL"; break;
-        case EOF:                result = "EOF"; break;
+        case END:                result = "EOF"; break;
     }
     return result;
 };

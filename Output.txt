@@ -1,0 +1,20 @@
+Success!
+Schemes(2):
+	snap(S,N,A,P)
+	NameHasID(N,S)
+Facts(2):
+	snap('12345','C. Brown','12 Apple','555-1234').
+	snap('67890','L. Van Pelt','34 Pear','555-5678').
+Rules(1):
+	NameHasID(N,S):-snap(S,N,A,P).
+Queries(1):
+	NameHasID('Snoopy',Id)?
+Domain(8):
+	'12 Apple'
+	'12345'
+	'34 Pear'
+	'555-1234'
+	'555-5678'
+	'67890'
+	'C. Brown'
+	'L. Van Pelt'

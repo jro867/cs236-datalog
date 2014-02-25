@@ -16,6 +16,7 @@ public:
     virtual ~TokensReader();
     
     Token* getNext();
+    Token* peek();
     Token* getCurrent();
     bool hasNext();
     

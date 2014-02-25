@@ -4,6 +4,7 @@ Scheme::Scheme() {
 }
 Scheme::Scheme(TokensReader& tokenReader) {
     this->printNL = true;
+    this->level = 1;
     if(tokenReader.getCurrent()->getTokenType() == ID){
         Node * idNode = new Node(tokenReader.getCurrent());
         this->setLeftChild(idNode);

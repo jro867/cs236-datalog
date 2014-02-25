@@ -49,6 +49,9 @@ void Node::setRightSibling(Node* sibling){
 void Node::setNL(bool _printNL) {
     this->printNL = _printNL;
 }
+void Node::setLevel(int _level) {
+    this->level = _level;
+}
 Node* Node::getLeftChild(){
     return this->leftChild;
 }
@@ -56,18 +59,16 @@ Node* Node::getRightSibling(){
     return this->rightSibling;
 }
 string Node::toString() {
-    return toString(0);
+    return toString(this->level);
 }
 string Node::toString(int level) {
     string tree;
+    while(level-- > 0)
+        tree.append("\t");
     if(this->leftChild != NULL)
         tree.append(this->leftChild->toString());
-    if(this->value != "") {
-        while(level-- > 0) {
-            tree.append("\t");
-        }
+    if(this->value != "")
         tree.append(this->value);
-    }
     if(this->printNL)
         tree.append("\n");
     if(this->rightSibling != NULL)

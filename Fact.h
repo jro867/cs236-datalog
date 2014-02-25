@@ -9,6 +9,7 @@
 #define	FACT_H
 
 #include "StringList.h"
+#include "Domain.h"
 #include "Node.h"
 
 class Fact : public Node {

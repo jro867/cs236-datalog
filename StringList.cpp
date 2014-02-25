@@ -16,6 +16,7 @@ StringList::StringList(TokensReader& tokenReader){
         if(tokenReader.getNext()->getTokenType() == STRING) {
             comma->setRightSibling(new Node(tokenReader.getCurrent()));
             // stringList
+            Domain::addToDomain(tokenReader.getCurrent()->getTokensValue());
             comma->getRightSibling()->setRightSibling(new StringList(tokenReader));
         }
     } else {

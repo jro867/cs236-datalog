@@ -7,14 +7,13 @@
 
 #include "ParsingException.h"
 
-ParsingException::ParsingException() {
+ParsingException::ParsingException() : runtime_error("Parsing Exception") {
 }
 
-ParsingException::ParsingException(const ParsingException& orig) {
+ParsingException::ParsingException(const ParsingException& orig) : runtime_error("Parsing Exception") {
 }
 
-ParsingException::~ParsingException() throw() {
-}
+ParsingException::~ParsingException() throw() {}
 
-ParsingException::ParsingException(Token* token) : errorToken(token) {}
+ParsingException::ParsingException(Token* token) : runtime_error("Failure!\n\t"+token->toString()){}
 

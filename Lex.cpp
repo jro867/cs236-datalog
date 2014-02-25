@@ -4,7 +4,7 @@
 #include "TokenType.h"
 #include "Utils.h"
 #include <iostream>
-
+#include <fstream>
 using namespace std;
 
 Lex::Lex() {
@@ -84,7 +84,7 @@ void Lex::generateTokens(Input* input) {
     while(state != End) {
         state = nextState();
     }
-    emit(EOF);
+    emit(END);
     
 }
 
@@ -276,12 +276,24 @@ void Lex::storeToken(Token* token) {
 int main(int argc, char* argv[]) {
     Lex lex(argv[1]);
     TokensReader reader = lex.getTokens();
-    DatalogProgram * program = new DatalogProgram(reader);
-    try {
-        cout << "Success!" << endl;
-        cout << program->toString() << endl;
-    } catch(ParsingException * e) {
-        cout << e->what() << endl;
+    if(argc > 2) {
+        ofstream output(argv[2]);
+
+        try {
+            DatalogProgram * program = new DatalogProgram(reader);
+            output << "Success!" << endl;
+            output << program->toString();
+        } catch(ParsingException& e) {
+            output << e.what();
+        }
+    } else {
+        try {
+            DatalogProgram * program = new DatalogProgram(reader);
+            cout << "Success!" << endl;
+            cout << program->toString();
+        } catch(ParsingException& e) {
+            cout << e.what();
+        }
     }
     return 0;
 }

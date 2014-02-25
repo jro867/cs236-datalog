@@ -25,6 +25,7 @@ public:
     void setRightSibling(Node*);
     void setValue(int);
     void setNL(bool);
+    void setLevel(int);
     Node* getLeftChild();
     Node* getRightSibling();
     string toString();
@@ -36,6 +37,7 @@ private:
     string toString(int level);
 protected:
     bool printNL = false;
+    int level = 0;
 };
 
 #endif	/* NODE_H */

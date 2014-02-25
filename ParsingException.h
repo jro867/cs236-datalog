@@ -10,24 +10,19 @@
 
 #include "Token.h"
 #include <exception>
+#include <stdexcept>
 #include <string>
+#include <iostream>
 
 using namespace std;
 
-class ParsingException : public exception {
+class ParsingException : public runtime_error {
 public:
     ParsingException();
     ParsingException(const ParsingException& orig);
     ParsingException(Token* token);
     
-    virtual const char* what() const throw() {
-        string msg = "Failure!\n";
-        msg.append(this->errorToken->toString());
-        return msg.c_str();
-    }
     virtual ~ParsingException() throw();
-private:
-    Token* errorToken;
 };
 
 #endif	/* PARSINGEXCEPTION_H */

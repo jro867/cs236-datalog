@@ -5,14 +5,31 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>DatalogProgram.h</itemPath>
+      <itemPath>Expression.h</itemPath>
+      <itemPath>Fact.h</itemPath>
+      <itemPath>FactList.h</itemPath>
+      <itemPath>HeadPredicate.h</itemPath>
+      <itemPath>IdList.h</itemPath>
       <itemPath>Input.h</itemPath>
       <itemPath>Lex.h</itemPath>
       <itemPath>Node.h</itemPath>
+      <itemPath>Operator.h</itemPath>
+      <itemPath>Parameter.h</itemPath>
+      <itemPath>ParameterList.h</itemPath>
+      <itemPath>ParsingException.h</itemPath>
+      <itemPath>Predicate.h</itemPath>
+      <itemPath>PredicateList.h</itemPath>
+      <itemPath>Query.h</itemPath>
+      <itemPath>QueryList.h</itemPath>
+      <itemPath>Rule.h</itemPath>
       <itemPath>RuleList.h</itemPath>
-      <itemPath>Schemes.h</itemPath>
+      <itemPath>Scheme.h</itemPath>
+      <itemPath>SchemesList.h</itemPath>
       <itemPath>State.h</itemPath>
+      <itemPath>StringList.h</itemPath>
       <itemPath>Token.h</itemPath>
       <itemPath>TokenType.h</itemPath>
+      <itemPath>TokensReader.h</itemPath>
       <itemPath>Utils.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -23,18 +40,31 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>DatalogProgram.cpp</itemPath>
+      <itemPath>Expression.cpp</itemPath>
+      <itemPath>Fact.cpp</itemPath>
+      <itemPath>FactList.cpp</itemPath>
+      <itemPath>HeadPredicate.cpp</itemPath>
+      <itemPath>IdList.cpp</itemPath>
       <itemPath>Input.cpp</itemPath>
       <itemPath>Lex.cpp</itemPath>
       <itemPath>Node.cpp</itemPath>
+      <itemPath>Operator.cpp</itemPath>
+      <itemPath>Parameter.cpp</itemPath>
+      <itemPath>ParameterList.cpp</itemPath>
+      <itemPath>ParsingException.cpp</itemPath>
+      <itemPath>Predicate.cpp</itemPath>
+      <itemPath>PredicateList.cpp</itemPath>
+      <itemPath>Query.cpp</itemPath>
+      <itemPath>QueryList.cpp</itemPath>
+      <itemPath>Rule.cpp</itemPath>
       <itemPath>RuleList.cpp</itemPath>
-      <itemPath>Schemes.cpp</itemPath>
+      <itemPath>Scheme.cpp</itemPath>
       <itemPath>SchemesList.cpp</itemPath>
-      <itemPath>SchemesList.h</itemPath>
       <itemPath>State.cpp</itemPath>
+      <itemPath>StringList.cpp</itemPath>
       <itemPath>Token.cpp</itemPath>
       <itemPath>TokenType.cpp</itemPath>
       <itemPath>TokensReader.cpp</itemPath>
-      <itemPath>TokensReader.h</itemPath>
       <itemPath>Utils.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -67,6 +97,26 @@
       </item>
       <item path="DatalogProgram.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Expression.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Expression.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Fact.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Fact.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FactList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FactList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="HeadPredicate.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="HeadPredicate.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IdList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="IdList.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Input.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Input.h" ex="false" tool="3" flavor2="0">
@@ -79,13 +129,49 @@
       </item>
       <item path="Node.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Operator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Operator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Parameter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Parameter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ParameterList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ParameterList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ParsingException.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ParsingException.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Predicate.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Predicate.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PredicateList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PredicateList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Query.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Query.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="QueryList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="QueryList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Rule.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Rule.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="RuleList.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="RuleList.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="Schemes.cpp" ex="false" tool="1" flavor2="0">
+      <item path="Scheme.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="Schemes.h" ex="false" tool="3" flavor2="0">
+      <item path="Scheme.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="SchemesList.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -94,6 +180,10 @@
       <item path="State.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="State.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="StringList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="StringList.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Token.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -137,6 +227,26 @@
       </item>
       <item path="DatalogProgram.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Expression.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Expression.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Fact.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Fact.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FactList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FactList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="HeadPredicate.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="HeadPredicate.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IdList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="IdList.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Input.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Input.h" ex="false" tool="3" flavor2="0">
@@ -149,13 +259,49 @@
       </item>
       <item path="Node.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Operator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Operator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Parameter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Parameter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ParameterList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ParameterList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ParsingException.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ParsingException.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Predicate.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Predicate.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PredicateList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PredicateList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Query.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Query.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="QueryList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="QueryList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Rule.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Rule.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="RuleList.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="RuleList.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="Schemes.cpp" ex="false" tool="1" flavor2="0">
+      <item path="Scheme.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="Schemes.h" ex="false" tool="3" flavor2="0">
+      <item path="Scheme.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="SchemesList.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -164,6 +310,10 @@
       <item path="State.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="State.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="StringList.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="StringList.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Token.cpp" ex="false" tool="1" flavor2="0">
       </item>

@@ -36,13 +36,28 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/DatalogProgram.o \
+	${OBJECTDIR}/Expression.o \
+	${OBJECTDIR}/Fact.o \
+	${OBJECTDIR}/FactList.o \
+	${OBJECTDIR}/HeadPredicate.o \
+	${OBJECTDIR}/IdList.o \
 	${OBJECTDIR}/Input.o \
 	${OBJECTDIR}/Lex.o \
 	${OBJECTDIR}/Node.o \
+	${OBJECTDIR}/Operator.o \
+	${OBJECTDIR}/Parameter.o \
+	${OBJECTDIR}/ParameterList.o \
+	${OBJECTDIR}/ParsingException.o \
+	${OBJECTDIR}/Predicate.o \
+	${OBJECTDIR}/PredicateList.o \
+	${OBJECTDIR}/Query.o \
+	${OBJECTDIR}/QueryList.o \
+	${OBJECTDIR}/Rule.o \
 	${OBJECTDIR}/RuleList.o \
-	${OBJECTDIR}/Schemes.o \
+	${OBJECTDIR}/Scheme.o \
 	${OBJECTDIR}/SchemesList.o \
 	${OBJECTDIR}/State.o \
+	${OBJECTDIR}/StringList.o \
 	${OBJECTDIR}/Token.o \
 	${OBJECTDIR}/TokenType.o \
 	${OBJECTDIR}/TokensReader.o \
@@ -78,6 +93,31 @@ ${OBJECTDIR}/DatalogProgram.o: DatalogProgram.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/DatalogProgram.o DatalogProgram.cpp
 
+${OBJECTDIR}/Expression.o: Expression.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Expression.o Expression.cpp
+
+${OBJECTDIR}/Fact.o: Fact.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Fact.o Fact.cpp
+
+${OBJECTDIR}/FactList.o: FactList.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/FactList.o FactList.cpp
+
+${OBJECTDIR}/HeadPredicate.o: HeadPredicate.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/HeadPredicate.o HeadPredicate.cpp
+
+${OBJECTDIR}/IdList.o: IdList.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/IdList.o IdList.cpp
+
 ${OBJECTDIR}/Input.o: Input.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
@@ -93,15 +133,60 @@ ${OBJECTDIR}/Node.o: Node.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Node.o Node.cpp
 
+${OBJECTDIR}/Operator.o: Operator.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Operator.o Operator.cpp
+
+${OBJECTDIR}/Parameter.o: Parameter.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Parameter.o Parameter.cpp
+
+${OBJECTDIR}/ParameterList.o: ParameterList.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/ParameterList.o ParameterList.cpp
+
+${OBJECTDIR}/ParsingException.o: ParsingException.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/ParsingException.o ParsingException.cpp
+
+${OBJECTDIR}/Predicate.o: Predicate.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Predicate.o Predicate.cpp
+
+${OBJECTDIR}/PredicateList.o: PredicateList.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/PredicateList.o PredicateList.cpp
+
+${OBJECTDIR}/Query.o: Query.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Query.o Query.cpp
+
+${OBJECTDIR}/QueryList.o: QueryList.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/QueryList.o QueryList.cpp
+
+${OBJECTDIR}/Rule.o: Rule.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Rule.o Rule.cpp
+
 ${OBJECTDIR}/RuleList.o: RuleList.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/RuleList.o RuleList.cpp
 
-${OBJECTDIR}/Schemes.o: Schemes.cpp 
+${OBJECTDIR}/Scheme.o: Scheme.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Schemes.o Schemes.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Scheme.o Scheme.cpp
 
 ${OBJECTDIR}/SchemesList.o: SchemesList.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -112,6 +197,11 @@ ${OBJECTDIR}/State.o: State.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/State.o State.cpp
+
+${OBJECTDIR}/StringList.o: StringList.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/StringList.o StringList.cpp
 
 ${OBJECTDIR}/Token.o: Token.cpp 
 	${MKDIR} -p ${OBJECTDIR}
