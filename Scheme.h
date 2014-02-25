@@ -9,7 +9,7 @@
 #include <iostream>
 
 using namespace std;
-class Scheme: public Node {
+class Scheme : public Node {
 public:
     Scheme();
     Scheme(TokensReader&);

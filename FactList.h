@@ -1,7 +1,7 @@
 #ifndef FACTLIST_H
 #define	FACTLIST_H
 
-#include "Scheme.h"
+#include "Fact.h"
 #include "Node.h"
 #include <vector>
 
@@ -16,7 +16,7 @@ public:
     
     static int getSize();
 private:
-//    static vector<Fact*> fact;
+    static vector<Fact*> facts;
 };
 #endif	/* SCHEMESLIST_H */
 

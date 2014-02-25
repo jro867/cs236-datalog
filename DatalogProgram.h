@@ -6,6 +6,7 @@
 #include "TokensReader.h"
 #include "Node.h"
 #include "SchemesList.h"
+#include "FactList.h"
 #include <vector>
 #include <iostream>
 using namespace std;
@@ -21,6 +22,8 @@ private:
     Node* readFacts(TokensReader&, Node* start);
     Node* readRules(TokensReader&, Node* start);
     Node* readQueries(TokensReader&, Node* start);
+    
+    Node* generateListSize(int size, Node*& last);
 };
 
 #endif	/* DATALOGPROGRAM_H */

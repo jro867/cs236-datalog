@@ -7,7 +7,11 @@ Token* TokensReader::getCurrent(){
     return tokens->at(curIndex);
 }
 Token* TokensReader::getNext(){
-    return tokens->at(++curIndex);
+    Token* next = tokens->at(++curIndex); 
+    while(next->getTokenType() == COMMENT) {
+        next = tokens->at(++curIndex); 
+    }
+    return next;
 }
 bool TokensReader::hasNext(){
     return curIndex < tokens->size()-1;

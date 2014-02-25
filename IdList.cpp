@@ -3,7 +3,7 @@
 IdList::IdList() {
 }
 
-IdList::IdList(TokensReader& tokenReader){
+IdList::IdList(TokensReader& tokenReader) {
     if(tokenReader.getNext()->getTokenType() == COMMA){
         Node * comma = new Node(tokenReader.getCurrent());
         this->setLeftChild(comma);

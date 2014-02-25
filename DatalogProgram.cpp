@@ -25,17 +25,17 @@ Node* DatalogProgram::readSchemes(TokensReader& tokenReader) {
         // set child to new Node Scheme
         Node * schemeNode = new Node(tokenReader.getCurrent());
         this->setLeftChild(schemeNode);
-        schemeNode->setRightSibling(new Node("("));
-        Node* schemeListSize = new Node("0");
-        schemeNode->getRightSibling()->setRightSibling(schemeListSize);
-        schemeListSize->setRightSibling(new Node(")"));
         if(tokenReader.getNext()->getTokenType() == COLON) {
             Node * colonNode = new Node(tokenReader.getCurrent());
-            schemeListSize->getRightSibling()->setRightSibling(colonNode);
+            colonNode->setNL(true);
             SchemesList* schemeList = new SchemesList(tokenReader);
-            schemeListSize->setValue(schemeList->getSize());
             colonNode->setRightSibling(schemeList);
             iter = schemeList;
+            
+            Node* tail;
+            Node* size = generateListSize(SchemesList::getSize(), tail);
+            schemeNode->setRightSibling(size);
+            tail->setRightSibling(colonNode);
         } else {
             throw ParsingException(tokenReader.getCurrent());
         }
@@ -45,23 +45,44 @@ Node* DatalogProgram::readSchemes(TokensReader& tokenReader) {
     return iter;
 }
 Node* DatalogProgram::readFacts(TokensReader& tokenReader, Node* start) {
+    Node* iter = start;
     if(tokenReader.getCurrent()->getTokenType() == FACTS) {
-        Node* facts = new Node(tokenReader.getCurrent());
-        start->setRightSibling(facts);
+        Node* fact = new Node(tokenReader.getCurrent());
+        start->setRightSibling(fact);
+        
         if(tokenReader.getNext()->getTokenType() == COLON) {
             Node* colon = new Node(tokenReader.getCurrent());
-            facts->setRightSibling(colon);
-//            colon->setRightSibling(new FactsList());
+            colon->setNL(true);
+            FactList* facts = new FactList(tokenReader);
+            colon->setRightSibling(facts);
+            
+            Node* tail;
+            Node* size = generateListSize(FactList::getSize(), tail);
+            tail->setRightSibling(colon);
+            fact->setRightSibling(size);
+            
+            iter = facts;
         } else {
             throw ParsingException(tokenReader.getCurrent());
         }
     } else {
         throw ParsingException(tokenReader.getCurrent());
     }
+    return iter;
 }
 Node* DatalogProgram::readRules(TokensReader& tokenReader, Node* start) {
     
 }
 Node* DatalogProgram::readQueries(TokensReader& tokenReader, Node* start) {
     
+}
+
+Node* DatalogProgram::generateListSize(int _size, Node*& last) {
+    Node* leftParen = new Node("(");
+    Node* size = new Node(_size);
+    Node* rightParen = new Node(")");
+    leftParen->setRightSibling(size);
+    size->setRightSibling(rightParen);
+    last = rightParen;
+    return leftParen;
 }
