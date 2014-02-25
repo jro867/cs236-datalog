@@ -8,7 +8,7 @@ IdList::IdList(TokensReader& tokenReader) {
             comma->setRightSibling(new Node(tokenReader.getCurrent()));
             comma->getRightSibling()->setRightSibling(new IdList(tokenReader));
         } else {
-            cout << "Error 1" << endl;
+//            cout << "Error 1" << endl;
             throw ParsingException(tokenReader.getCurrent());
         }
     } else {

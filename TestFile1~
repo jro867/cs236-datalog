@@ -7,7 +7,7 @@ Facts:
     snap('67890','L. Van Pelt','34 Pear','555-5678').
  
 Rules:
-    NameHasID(N,S) :- snap(S,N,A,P)?
+    NameHasID(N,S) :- snap(S,N,A,P).
  
 Queries:
     NameHasID('Snoopy',Id)?

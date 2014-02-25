@@ -4,7 +4,11 @@ TokensReader::TokensReader() : curIndex(0) {}
 TokensReader::TokensReader(vector <Token*>* _tokens) : curIndex(0), tokens(_tokens) {}
 
 Token* TokensReader::getCurrent(){
-    return tokens->at(curIndex);
+    Token* next = tokens->at(curIndex); 
+    while(next->getTokenType() == COMMENT) {
+        next = tokens->at(++curIndex); 
+    }
+    return next;
 }
 Token* TokensReader::getNext(){
     Token* next = tokens->at(++curIndex); 
